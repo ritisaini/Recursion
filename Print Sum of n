@@ -1,0 +1,17 @@
+// Print sum of first n natural numbers?
+public class Print_Sum_of_n {
+    public static int calcSum(int n){
+        if(n == 1){
+            return 1;
+        }
+        int snm1 = calcSum(n-1);
+        int sn = n + calcSum(n-1); 
+          return sn;
+    }
+    public static void main(String args[]){
+        int n = 5;
+        System.out.println(calcSum(n));
+    }
+}
+// Time Complexity = o(n)
+// Space Complexity = o(n)
